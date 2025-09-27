@@ -316,28 +316,28 @@
             var timeSlider = document.getElementById('time-slider');
             var yearLabel = document.getElementById('year-label');
 
-            var loadingOverlay = document.getElementById('map-loading');
-            var progressBar = document.getElementById('map-progress-bar');
+            // var loadingOverlay = document.getElementById('map-loading');
+            // var progressBar = document.getElementById('map-progress-bar');
 
-            loadingOverlay.style.display = "flex";
-            progressBar.style.width = "0%";
+            // loadingOverlay.style.display = "flex";
+            // progressBar.style.width = "0%";
 
-            let progress = 0;
-            const interval = setInterval(() => {
-                if (progress < 90) {
-                    progress += 1;
-                    progressBar.style.width = progress + "%";
-                }
-            }, 150);
+            // let progress = 0;
+            // const interval = setInterval(() => {
+            //     if (progress < 90) {
+            //         progress += 1;
+            //         progressBar.style.width = progress + "%";
+            //     }
+            // }, 15);
 
-            var selectedValue = selector.value;
-            iframe.onload = () => {
-                clearInterval(interval);
-                progressBar.style.width = "100%";
-                setTimeout(() => {
-                    loadingOverlay.style.display = "none";
-                }, 500);
-            };
+            // var selectedValue = selector.value;
+            // iframe.onload = () => {
+            //     clearInterval(interval);
+            //     progressBar.style.width = "100%";
+            //     setTimeout(() => {
+            //         loadingOverlay.style.display = "none";
+            //     }, 50);
+            // };
             // ✅ 关键修改：添加基础路径
             iframe.src = `https://yydwjj.xyz/map/${selectedValue}`;
 
